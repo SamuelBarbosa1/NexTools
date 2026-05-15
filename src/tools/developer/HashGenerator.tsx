@@ -77,7 +77,7 @@ export function HashGenerator() {
           <HashOutput label="SHA-512" value={hashes.sha512} onCopy={() => copyToClipboard(hashes.sha512, "SHA-512")} />
           <HashOutput label="SHA-3" value={hashes.sha3} onCopy={() => copyToClipboard(hashes.sha3, "SHA-3")} />
         </div>
-      </div>
+      </div>  
     </ToolWrapper>
   )
 }

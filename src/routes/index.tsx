@@ -17,6 +17,17 @@ import { ImageConverter } from "@/tools/media/ImageConverter"
 import { QrGenerator } from "@/tools/media/QrGenerator"
 import { EmailValidator } from "@/tools/text/EmailValidator"
 import { Settings } from "@/pages/Settings"
+import { BankAccountGenerator } from "@/tools/general/BankAccountGenerator"
+import { PisPasepGenerator } from "@/tools/general/PisPasepGenerator"
+import { VehicleGenerator } from "@/tools/general/VehicleGenerator"
+import { ResumeBuilder } from "@/tools/general/ResumeBuilder"
+import { CreditCardGenerator } from "@/tools/general/CreditCardGenerator"
+import { PersonGenerator } from "@/tools/general/PersonGenerator"
+import { CnhGenerator } from "@/tools/general/CnhGenerator"
+import { VoterTitleGenerator } from "@/tools/general/VoterTitleGenerator"
+import { CertificateGenerator } from "@/tools/general/CertificateGenerator"
+import { InscricaoEstadualGenerator } from "@/tools/general/InscricaoEstadualGenerator"
+import { SalaryCalculator } from "@/tools/general/SalaryCalculator"
 
 const router = createBrowserRouter([
   {
@@ -42,6 +53,50 @@ const router = createBrowserRouter([
       {
         path: "tools/cpf-cnpj-generator",
         element: <CpfCnpjGenerator />,
+      },
+      {
+        path: "tools/bank-account-generator",
+        element: <BankAccountGenerator />,
+      },
+      {
+        path: "tools/pis-pasep-generator",
+        element: <PisPasepGenerator />,
+      },
+      {
+        path: "tools/vehicle-generator",
+        element: <VehicleGenerator />,
+      },
+      {
+        path: "tools/resume-builder",
+        element: <ResumeBuilder />,
+      },
+      {
+        path: "tools/credit-card-generator",
+        element: <CreditCardGenerator />,
+      },
+      {
+        path: "tools/person-generator",
+        element: <PersonGenerator />,
+      },
+      {
+        path: "tools/cnh-generator",
+        element: <CnhGenerator />,
+      },
+      {
+        path: "tools/voter-title-generator",
+        element: <VoterTitleGenerator />,
+      },
+      {
+        path: "tools/certificate-generator",
+        element: <CertificateGenerator />,
+      },
+      {
+        path: "tools/inscricao-estadual-generator",
+        element: <InscricaoEstadualGenerator />,
+      },
+      {
+        path: "tools/salary-calculator",
+        element: <SalaryCalculator />,
       },
       {
         path: "tools/json-formatter",
