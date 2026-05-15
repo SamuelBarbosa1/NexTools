@@ -1,0 +1,160 @@
+import {
+  Key,
+  Link,
+  MapPin,
+  FileText,
+  Database,
+  Code,
+  Hash,
+  Clock,
+  FileDiff,
+  Type,
+  Image as ImageIcon,
+  QrCode,
+  Mail,
+} from "lucide-react"
+
+export type ToolCategory = "Geral" | "Desenvolvedor" | "Texto e Mídia"
+
+export type Tool = {
+  id: string
+  name: string
+  description: string
+  icon: React.ElementType
+  path: string
+  category: ToolCategory
+}
+
+export const tools: Tool[] = [
+  // Geral
+  {
+    id: "gerador-senha",
+    name: "Gerador de Senha",
+    description: "Crie senhas fortes e seguras com opções personalizáveis.",
+    icon: Key,
+    path: "/tools/password-generator",
+    category: "Geral",
+  },
+  {
+    id: "encurtador-url",
+    name: "Encurtador de URL",
+    description: "Encurte links longos para compartilhar mais facilmente.",
+    icon: Link,
+    path: "/tools/url-shortener",
+    category: "Geral",
+  },
+  {
+    id: "dados-brasil",
+    name: "Dados Brasil",
+    description: "Consulte informações sobre CEP, DDD, etc.",
+    icon: MapPin,
+    path: "/tools/brazil-data",
+    category: "Geral",
+  },
+  {
+    id: "gerador-cpf-cnpj",
+    name: "Gerador CPF/CNPJ",
+    description: "Gere e valide CPFs e CNPJs para testes de software.",
+    icon: FileText,
+    path: "/tools/cpf-cnpj-generator",
+    category: "Geral",
+  },
+  {
+    id: "dados-fake",
+    name: "Dados Fake (BR)",
+    description: "Gere dados fictícios brasileiros para testes.",
+    icon: Database,
+    path: "/tools/fake-data",
+    category: "Geral",
+  },
+
+  // Desenvolvedor
+  {
+    id: "formatador-json",
+    name: "Formatador JSON",
+    description: "Formate, valide e embeleze seus arquivos JSON.",
+    icon: Code,
+    path: "/tools/json-formatter",
+    category: "Desenvolvedor",
+  },
+  {
+    id: "gerador-uuid",
+    name: "Gerador de UUID",
+    description: "Gere Identificadores Únicos Universais (UUIDs).",
+    icon: Hash,
+    path: "/tools/uuid-generator",
+    category: "Desenvolvedor",
+  },
+  {
+    id: "gerador-hash",
+    name: "Gerador de Hash",
+    description: "Calcule hashes MD5, SHA-1, SHA-256 e mais.",
+    icon: Hash,
+    path: "/tools/hash-generator",
+    category: "Desenvolvedor",
+  },
+  {
+    id: "timestamp-converter",
+    name: "Timestamp Converter",
+    description: "Converta timestamps Unix para datas legíveis e vice-versa.",
+    icon: Clock,
+    path: "/tools/timestamp-converter",
+    category: "Desenvolvedor",
+  },
+  {
+    id: "diff-checker",
+    name: "Diff Checker",
+    description: "Compare dois blocos de texto para encontrar as diferenças.",
+    icon: FileDiff,
+    path: "/tools/diff-checker",
+    category: "Desenvolvedor",
+  },
+
+  // Texto e Mídia
+  {
+    id: "conversor-texto",
+    name: "Conversor de Texto",
+    description: "Converta texto para maiúsculas, minúsculas, camelCase, etc.",
+    icon: Type,
+    path: "/tools/text-converter",
+    category: "Texto e Mídia",
+  },
+  {
+    id: "conversor-imagem",
+    name: "Conversor de Imagem",
+    description: "Converta imagens entre formatos (PNG, JPEG, WebP).",
+    icon: ImageIcon,
+    path: "/tools/image-converter",
+    category: "Texto e Mídia",
+  },
+  {
+    id: "gerador-qrcode",
+    name: "Gerador de QR Code",
+    description: "Crie códigos QR para links, textos, ou contatos.",
+    icon: QrCode,
+    path: "/tools/qr-generator",
+    category: "Texto e Mídia",
+  },
+  {
+    id: "lorem-ipsum",
+    name: "Lorem Ipsum",
+    description: "Gere textos de preenchimento para layouts e protótipos.",
+    icon: FileText,
+    path: "/tools/lorem-ipsum",
+    category: "Texto e Mídia",
+  },
+  {
+    id: "validador-email",
+    name: "Validador de E-mail",
+    description: "Verifique a validade e a sintaxe de endereços de e-mail.",
+    icon: Mail,
+    path: "/tools/email-validator",
+    category: "Texto e Mídia",
+  },
+]
+
+export const categories: ToolCategory[] = [
+  "Geral",
+  "Desenvolvedor",
+  "Texto e Mídia",
+]
