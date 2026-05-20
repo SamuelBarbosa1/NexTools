@@ -23,38 +23,38 @@ type Education = {
 }
 
 const INITIAL_DATA = {
-  fullName: "Carlos Eduardo Santos",
+  fullName: "Samuel Barbosa de Oliveira",
   title: "Desenvolvedor Full Stack Senior",
-  email: "carlos.santos@email.com",
-  phone: "(11) 98765-4321",
-  location: "São Paulo, SP - Brasil",
-  linkedin: "linkedin.com/in/carlossantos",
+  email: "samuel.oliveira@email.com",
+  phone: "(61) 9999-9999",
+  location: "Brasília, DF - Brasil",
+  linkedin: "https://www.linkedin.com/in/samuel-oliveira-4007602b9",
   summary: "Desenvolvedor Full Stack com mais de 7 anos de experiência na criação de aplicações web escaláveis e de alta performance. Especialista em ecossistema React, Node.js e arquitetura de microsserviços. Apaixonado por código limpo, boas práticas e mentoria de desenvolvedores juniores.",
   experiences: [
     {
       id: "1",
-      company: "Tech Solutions S.A.",
-      role: "Líder Técnico Frontend",
-      period: "2021 - Presente",
-      description: "Liderança da equipe de desenvolvimento frontend na reestruturação do principal produto da empresa usando Next.js e Tailwind CSS. Redução de 40% no tempo de carregamento da página e aumento de 25% na conversão de usuários."
+      company: "Ensti Soluções Eficientes em Tecnologia",
+      role: "Trainee TI",
+      period: "2026 - Presente",
+      description: "Atuação em projetos de desenvolvimento de software, com foco em tecnologias web e suporte técnico. Participação em treinamentos e capacitações para aprimoramento das habilidades técnicas e profissionais."
     },
     {
       id: "2",
-      company: "Inovação Digital Ltda",
-      role: "Desenvolvedor Full Stack Pleno",
-      period: "2018 - 2021",
-      description: "Desenvolvimento e manutenção de APIs RESTful em Node.js e interfaces dinâmicas em React. Integração com gateways de pagamento e serviços em nuvem da AWS."
+      company: "Sonda Make IT Easy",
+      role: "Agente de Service Desk",
+      period: "2025 - 2026",
+      description: "Atendimento ao cliente e resolução de problemas técnicos relacionados a equipamentos e softwares."
     }
   ] as Experience[],
   educations: [
     {
       id: "1",
-      institution: "Universidade de São Paulo (USP)",
-      course: "Bacharelado em Ciência da Computação",
-      period: "2014 - 2018"
+      institution: "Universidade Cruzeiro do Sul (UDF)",
+      course: "Tecnologo em Análise e Desenvolvimento de Sistemas",
+      period: "2024"
     }
   ] as Education[],
-  skills: ["React", "TypeScript", "Node.js", "Next.js", "Tailwind CSS", "SQL / NoSQL", "Docker", "AWS", "CI/CD", "Scrum"]
+  skills: ["React", "TypeScript", "Golang", "Node.js", "Next.js", "Tailwind CSS", "MySQL", "Docker", "Git", "CI/CD", "Scrum"]
 }
 
 export function ResumeBuilder() {
@@ -163,23 +163,92 @@ export function ResumeBuilder() {
       {/* Estilo para impressão limpa do currículo */}
       <style>{`
         @media print {
-          body * {
-            visibility: hidden;
+          /* Ocultar elementos de UI globais e do editor */
+          aside,
+          header,
+          nav,
+          button,
+          .no-print,
+          .flex.flex-wrap.gap-2.mb-6,
+          .mx-auto.max-w-4xl > div:first-child,
+          .lg\\:col-span-6:first-child,
+          .lg\\:col-span-6 > div > label {
+            display: none !important;
           }
-          #printable-resume, #printable-resume * {
-            visibility: visible;
-          }
-          #printable-resume {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
+
+          /* Resetar containers pais para fluxo normal de bloco na página inteira */
+          html,
+          body,
+          #root,
+          .min-h-screen,
+          main,
+          .mx-auto.max-w-4xl,
+          .pt-2,
+          .grid,
+          .lg\\:col-span-6 {
+            display: block !important;
+            width: 100% !important;
+            height: auto !important;
+            min-height: 0 !important;
             padding: 0 !important;
             margin: 0 !important;
-            box-shadow: none !important;
             border: none !important;
             background: white !important;
             color: black !important;
+            box-shadow: none !important;
+            overflow: visible !important;
+            position: static !important;
+          }
+
+          /* Garantir que o container do currículo ocupe toda a largura e tenha fundo branco */
+          #printable-resume {
+            display: block !important;
+            visibility: visible !important;
+            position: relative !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            height: auto !important;
+            min-height: 0 !important;
+            border: none !important;
+            padding: 20px !important;
+            margin: 0 !important;
+            box-shadow: none !important;
+            background: white !important;
+            color: black !important;
+          }
+
+          /* Forçar cores pretas e cinzas escuras para todos os textos impressos */
+          #printable-resume * {
+            color: #0f172a !important; /* Slate 900 */
+            background: transparent !important;
+            visibility: visible !important;
+          }
+
+          /* Forçar cores específicas para seções em destaque */
+          #printable-resume h1 {
+            color: #0f172a !important; /* Slate 900 */
+            font-size: 24pt !important;
+          }
+
+          #printable-resume .text-primary {
+            color: #1e3a8a !important; /* Azul escuro profissional */
+          }
+
+          #printable-resume .text-slate-600,
+          #printable-resume .text-slate-700,
+          #printable-resume .text-slate-500 {
+            color: #475569 !important; /* Slate 600 */
+          }
+
+          #printable-resume .bg-slate-100 {
+            background-color: #f1f5f9 !important;
+            border-color: #cbd5e1 !important;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+          }
+
+          #printable-resume .border-slate-200 {
+            border-color: #cbd5e1 !important;
           }
         }
       `}</style>
