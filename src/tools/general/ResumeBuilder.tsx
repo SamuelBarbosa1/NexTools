@@ -160,9 +160,13 @@ export function ResumeBuilder() {
       description="Crie e formate seu currículo profissional rapidamente e exporte para PDF."
       icon={FileText}
     >
-      {/* Estilo para impressão limpa do currículo */}
       <style>{`
         @media print {
+          @page {
+            size: auto;
+            margin: 0mm; /* Removes default browser headers & footers */
+          }
+
           /* Ocultar elementos de UI globais e do editor */
           aside,
           header,
@@ -210,7 +214,7 @@ export function ResumeBuilder() {
             height: auto !important;
             min-height: 0 !important;
             border: none !important;
-            padding: 20px !important;
+            padding: 15mm 20mm !important; /* Compensa a margem 0 da página */
             margin: 0 !important;
             box-shadow: none !important;
             background: white !important;
