@@ -28,6 +28,10 @@ import { VoterTitleGenerator } from "@/tools/general/VoterTitleGenerator"
 import { CertificateGenerator } from "@/tools/general/CertificateGenerator"
 import { InscricaoEstadualGenerator } from "@/tools/general/InscricaoEstadualGenerator"
 import { SalaryCalculator } from "@/tools/general/SalaryCalculator"
+import { JwtValidator } from "@/tools/developer/JwtValidator"
+import { BaseConverter } from "@/tools/developer/BaseConverter"
+import { WhatsAppLinkGenerator } from "@/tools/general/WhatsAppLinkGenerator"
+import { FormatConverter } from "@/tools/developer/FormatConverter"
 
 const router = createBrowserRouter([
   {
@@ -69,6 +73,10 @@ const router = createBrowserRouter([
       {
         path: "tools/resume-builder",
         element: <ResumeBuilder />,
+      },
+      {
+        path: "tools/whatsapp-link-generator",
+        element: <WhatsAppLinkGenerator />,
       },
       {
         path: "tools/credit-card-generator",
@@ -133,6 +141,18 @@ const router = createBrowserRouter([
       {
         path: "tools/diff-checker",
         element: <DiffChecker />,
+      },
+      {
+        path: "tools/jwt-validator",
+        element: <JwtValidator />,
+      },
+      {
+        path: "tools/base-converter",
+        element: <BaseConverter />,
+      },
+      {
+        path: "tools/format-converter",
+        element: <FormatConverter />,
       },
       {
         path: "tools/image-converter",

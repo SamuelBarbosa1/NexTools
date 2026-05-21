@@ -20,6 +20,10 @@ import {
   Scroll,
   Building2,
   Calculator,
+  Shield,
+  Binary,
+  MessageSquare,
+  FileCode,
 } from "lucide-react"
 
 export type ToolCategory = "Geral" | "Desenvolvedor" | "Texto e Mídia"
@@ -156,6 +160,14 @@ export const tools: Tool[] = [
     category: "Geral",
   },
   {
+    id: "gerador-link-whatsapp",
+    name: "Gerador de Link do WhatsApp",
+    description: "Crie links diretos e QR Codes para iniciar conversas no WhatsApp com mensagens personalizadas.",
+    icon: MessageSquare,
+    path: "/tools/whatsapp-link-generator",
+    category: "Geral",
+  },
+  {
     id: "dados-fake",
     name: "Dados Fake (BR)",
     description: "Gere dados fictícios brasileiros para testes.",
@@ -203,6 +215,30 @@ export const tools: Tool[] = [
     description: "Compare dois blocos de texto para encontrar as diferenças.",
     icon: FileDiff,
     path: "/tools/diff-checker",
+    category: "Desenvolvedor",
+  },
+  {
+    id: "validador-jwt",
+    name: "Decodificador e Validador de JWT",
+    description: "Decodifique e valide seus JSON Web Tokens (JWT) localmente de forma segura.",
+    icon: Shield,
+    path: "/tools/jwt-validator",
+    category: "Desenvolvedor",
+  },
+  {
+    id: "conversor-base",
+    name: "Conversor de Base",
+    description: "Converta textos e valores numéricos entre diferentes bases e codificações em tempo real.",
+    icon: Binary,
+    path: "/tools/base-converter",
+    category: "Desenvolvedor",
+  },
+  {
+    id: "conversor-formatos",
+    name: "Conversor de Formatos",
+    description: "Converta dados facilmente entre JSON, YAML, XML e CSV com validação instantânea.",
+    icon: FileCode,
+    path: "/tools/format-converter",
     category: "Desenvolvedor",
   },
 
