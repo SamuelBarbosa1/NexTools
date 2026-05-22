@@ -11,7 +11,7 @@ import { Slider } from "@/components/ui/slider"
 import { Textarea } from "@/components/ui/textarea"
 
 export function QrGenerator() {
-  const [value, setValue] = useState("https://nex-tools-snowy.vercel.app/")
+  const [value, setValue] = useState("https://github.com/SamuelBarbosa1")
   const [size, setSize] = useState([256])
   const [fgColor, setFgColor] = useState("#000000")
   const [bgColor, setBgColor] = useState("#ffffff")
