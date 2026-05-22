@@ -186,6 +186,22 @@ export const tools: Tool[] = [
     category: "Desenvolvedor",
   },
   {
+    id: "formatador-sql",
+    name: "Formatador SQL",
+    description: "Formate, embeleze e idente suas consultas SQL de diferentes bancos.",
+    icon: Database,
+    path: "/tools/sql-formatter",
+    category: "Desenvolvedor",
+  },
+  {
+    id: "exemplos-hello-world",
+    name: "Exemplos de Código (Hello World)",
+    description: "Exemplos de código e sintaxe de inicialização para diversas linguagens de programação.",
+    icon: FileCode,
+    path: "/tools/hello-world",
+    category: "Desenvolvedor",
+  },
+  {
     id: "gerador-uuid",
     name: "Gerador de UUID",
     description: "Gere Identificadores Únicos Universais (UUIDs).",

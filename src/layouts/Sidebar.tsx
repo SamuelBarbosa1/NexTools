@@ -103,7 +103,7 @@ export function Sidebar({ isOpen }: SidebarProps) {
         </nav>
       </ScrollArea>
       
-      <div className="mt-auto p-4">
+      <div className="p-4">
         <Separator className="mb-4" />
         <NavLink
           to="/settings"

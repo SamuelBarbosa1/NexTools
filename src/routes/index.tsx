@@ -32,6 +32,8 @@ import { JwtValidator } from "@/tools/developer/JwtValidator"
 import { BaseConverter } from "@/tools/developer/BaseConverter"
 import { WhatsAppLinkGenerator } from "@/tools/general/WhatsAppLinkGenerator"
 import { FormatConverter } from "@/tools/developer/FormatConverter"
+import { SqlFormatter } from "@/tools/developer/SqlFormatter"
+import { HelloWorldGenerator } from "@/tools/developer/HelloWorldGenerator"
 
 const router = createBrowserRouter([
   {
@@ -153,6 +155,14 @@ const router = createBrowserRouter([
       {
         path: "tools/format-converter",
         element: <FormatConverter />,
+      },
+      {
+        path: "tools/sql-formatter",
+        element: <SqlFormatter />,
+      },
+      {
+        path: "tools/hello-world",
+        element: <HelloWorldGenerator />,
       },
       {
         path: "tools/image-converter",

@@ -9,7 +9,7 @@ export function RootLayout() {
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen)
 
   return (
-    <div className="flex min-h-screen w-full bg-background text-foreground">
+    <div className="flex h-screen w-full bg-background text-foreground overflow-hidden">
       <Sidebar isOpen={isSidebarOpen} />
       
       {/* Overlay for mobile when sidebar is open */}
