@@ -64,9 +64,9 @@ export function CertificateGenerator() {
     let folha = ""
     for (let i = 0; i < 3; i++) { folha += Math.floor(Math.random() * 10).toString() }
     
-    // Termo (4)
+    // Termo (7)
     let termo = ""
-    for (let i = 0; i < 4; i++) { termo += Math.floor(Math.random() * 10).toString() }
+    for (let i = 0; i < 7; i++) { termo += Math.floor(Math.random() * 10).toString() }
 
     const base = cns + acervo + rcpn + ano + tipo + livro + folha + termo
     const dv1 = calcDv(base)
@@ -74,7 +74,7 @@ export function CertificateGenerator() {
     const full = base + dv1 + dv2
 
     const formatted = full.replace(
-      /(\d{6})(\d{2})(\d{2})(\d{4})(\d{1})(\d{5})(\d{3})(\d{4})(\d{2})/,
+      /(\d{6})(\d{2})(\d{2})(\d{4})(\d{1})(\d{5})(\d{3})(\d{7})(\d{2})/,
       "$1.$2.$3.$4.$5.$6.$7.$8-$9"
     )
 
