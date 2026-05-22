@@ -34,7 +34,7 @@ export function UrlShortener() {
     // Simulating API call
     setTimeout(() => {
       const hash = alias || Math.random().toString(36).substring(2, 8)
-      setShortenedUrl(`https://nxt.sh/${hash}`)
+      setShortenedUrl(`https://nex-tools-snowy.vercel.app/${hash}`)
       setIsLoading(false)
       toast.success("URL encurtada com sucesso!")
     }, 800)
@@ -79,7 +79,7 @@ export function UrlShortener() {
                 <div className="space-y-2">
                   <Label htmlFor="alias">Alias Personalizado (Opcional)</Label>
                   <div className="flex items-center gap-2">
-                    <span className="text-muted-foreground select-none">nxt.sh/</span>
+                    <span className="text-muted-foreground select-none">nex-tools-snowy.vercel.app/</span>
                     <Input
                       id="alias"
                       type="text"
